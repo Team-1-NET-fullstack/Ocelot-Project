@@ -1,0 +1,75 @@
+{
+  "ReRoutes": [
+
+    {
+      // Downstream: what we are willing to call
+      "DownstreamPathTemplate": "/api/AllergyMasters",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9001
+        }
+      ],
+      // Upstream : source of call
+      "UpstreamPathTemplate": "/api/AllergyMasters",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ] // We can include post,put, delete seperated by comma
+    },
+    {
+      // Downstream: what we are willing to call
+      "DownstreamPathTemplate": "/api/AllergyMasters/id",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9001
+        }
+      ],
+      // Upstream : source of call
+      "UpstreamPathTemplate": "/api/AllergyMasters",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ] // We can include post,put, delete seperated by comma
+    },
+    {
+      // Downstream: what we are willing to call
+      "DownstreamPathTemplate": "/api/AllergyMasters/desc",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9001
+        }
+      ],
+      // Upstream : source of call
+      "UpstreamPathTemplate": "/api/AllergyMasters",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ] // We can include post,put, delete seperated by comma
+    },
+    {
+      // Downstream: what we are willing to call
+      "DownstreamPathTemplate": "/api/Note",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9000
+        }
+      ],
+      // Upstream : source of call
+      "UpstreamPathTemplate": "/api/Note",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ] // We can include post,put, delete seperated by comma
+    },
+    {
+      // Downstream: what we are willing to call
+      "DownstreamPathTemplate": "/api/Note/id",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9000
+        }
+      ],
+      // Upstream : source of call
+      "UpstreamPathTemplate": "/api/Note",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ] // We can include post,put, delete seperated by comma
+    }
+  ]
+}
